@@ -23,6 +23,5 @@ int main (void)
 
 	/* Print newline */
 	putchar('\n');
-
 	return (0);
 }

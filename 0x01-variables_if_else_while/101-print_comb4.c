@@ -18,13 +18,16 @@ int main(void)
 				putchar((i % 10) + '0');
 				putchar((j % 10) + '0');
 				putchar((z % 10) + '0');
+
 				if (i == 7 && j == 8 && z == 9)
 					continue;
+
 				putchar(',');
 				putchar(' ');
 			}
 		}
 	}
+
 	putchar('\n');
 
 	return (0);

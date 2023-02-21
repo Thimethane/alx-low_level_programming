@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_alphabet - Prints the alphabet in lower case
+ * print_alphabet - Prints the alphabet in lower case using _putchar
  *
- * main - Entry point
+ * Return: void
  */
 void print_alphabet(void)
 {
@@ -11,5 +11,6 @@ void print_alphabet(void)
 
 	for(letter = 'a'; letter <= 'z' ; letter++)
 		_putchar(letter);
+
 	_putchar('\n');
 }

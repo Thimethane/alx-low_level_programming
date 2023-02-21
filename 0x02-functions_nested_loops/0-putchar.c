@@ -1,14 +1,18 @@
+#include "main.h"
 #include <unistd.h>
-#include "holberton.h"
 
 /**
- * _putchar: - Function declaration
+ * main - Entry point
  *
- * Return: Always 1 (Success)
- * On error, -1 is returned
+ * Return: Always 0 (Success)
  */
-int _putchar(char c)
+int main(void)
 {
-	return (write(1, &c, 1));
-}
+	char str[] = "_putchar\n";
+	int i;
 
+	for (i = 0; str[i] != '\0'; i++)
+		_putchar(str[i]);
+	
+	return (0);
+}

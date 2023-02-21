@@ -1,9 +1,9 @@
-#include "holberton.h"
-#include <stdio.h>
-#include <unistd.h>
+#include "main.h"
 
 /**
  * print_alphabet - Prints the alphabet in lower case
+ *
+ * main - Entry point
  */
 void print_alphabet(void)
 {

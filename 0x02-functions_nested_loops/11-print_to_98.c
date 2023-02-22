@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <main.h>
 
 /**
@@ -8,16 +7,21 @@
  */
 void print_to_98(int n)
 {
-	if (n >= 98)
+	int i;
+
+	if (n <= 98)
 	{
-		while (n > 98)
-			printf("%d, ", n--);
-		printf("%d\n", n);
+		for(i = n; i < 98; i++)
+		{
+			printf("%d, ", i);
+		}
 	}
 	else
 	{
-		while(n < 98)
-			printf("%d, ", n++);
-		printf("%d\n", n);
+		for (i = n; i > 98; i--)
+		{
+			printf("%d, ", i);
+		}
 	}
+	printf("98\n");
 }

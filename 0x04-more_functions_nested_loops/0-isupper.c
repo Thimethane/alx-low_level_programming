@@ -7,14 +7,16 @@
  */
 int _isupper(int c)
 {
-	char i;
-	int value;
+	char i = 'A';
+	int value = 0;
 
-	for (i = 'A'; i <= 'Z'; i++)
+	for (; i <= 'Z'; i++)
 	{
 		if (c == i)
+		{
 			value = 1;
-		else
-			value = 0;
+			break;
+		}
 	}
+
 	return (value);

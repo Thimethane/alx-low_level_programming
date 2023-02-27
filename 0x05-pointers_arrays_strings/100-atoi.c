@@ -31,3 +31,4 @@ int _atoi(char *s)
 		return INT_MIN;
 
 	return (num * sign);
+}

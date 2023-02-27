@@ -29,6 +29,8 @@ int main(void)
 		if ((sum - 2772) % 2 != 0)
 			diff_half1++;
 
+		srand(time(0));
+
 		for (index = 0; password[index]; index++)
 		{
 			if (password[index] >= (33 + diff_half2))
@@ -39,7 +41,7 @@ int main(void)
 		}
 	}
 
-	printf("%s", password);
+	printf("%s\n", password);
 
 	return (0);
 }

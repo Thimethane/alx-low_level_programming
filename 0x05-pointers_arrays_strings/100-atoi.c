@@ -22,13 +22,15 @@ int _atoi(char *s)
 		else if (num > 0)
 			break;
 
-	} while (*s++);
+	} while (*s++)
 
-	if (num > INT_MAX && sign == 1)
-		return INT_MAX;
-
-	if (num > INT_MAX && sign == -1)
-		return INT_MIN;
+	if (num > INT_MAX)
+	{
+	       	if (sign == 1)
+			return INT_MAX;
+		else
+			return INT_MIN;
+	}
 
 	return (num * sign);
 }

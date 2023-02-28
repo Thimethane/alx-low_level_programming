@@ -15,13 +15,13 @@ int main(void)
 
 	srand(time(NULL));
 
-	for (i = 0; i < 83; i++)
+	for (i = 0; i < 84; i++)
 	{
 		password[i] = rand() % 94 + 33;
 		sum += password[i];
 	}
 
-	password[83] = 2772 - sum;
+	password[84] = 2772 - sum;
 
 	printf("%s\n", password);
 

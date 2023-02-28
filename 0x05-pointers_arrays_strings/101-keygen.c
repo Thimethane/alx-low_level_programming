@@ -21,7 +21,7 @@ int main(void)
 
 	while (sum != REQUIRED_SUM)
 	{
-		for (i = 0; i < PASSWORD_LENGTH && sum REQUIRED_SUM; i++)
+		for (i = 0; i < PASSWORD_LENGTH && sum != REQUIRED_SUM; i++)
 		{
 			password[i] = MIN_ASCII_VALUE + (rand() % (MAX_ASCII_VALUE - MIN_ASCII_VALUE + 1));
 			sum += password[i];

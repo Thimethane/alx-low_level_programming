@@ -11,20 +11,30 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int index, n1_len = 0, n2_len = 0;
+	int i, j, k, len1 = 0, len2 = 0, sum = 0, carry = 0;
 
-	for (index = 0; *(n1 + index); index++)
-		n1_len++;
+	while (n1[len1])
+		len++;
+	while (n2[len2])
+		len++;
 
-	for (index = 0; *(n2 + index); index++)
-		n2_len++;
-
-	if (size_r <= n1_len + 1 || size_r <= n2_len + 1)
+	if (len1 + 2 > size_r || len2 + 2 > size_r)
 		return (0);
 
-	n1 += n1_len - 1;
-	n2 += n2_len - 1;
-	*(r + size_r) = '\0';
+	r[--size_r] = '\0';
+	i = len1 - 1;
+	j = len2 - 1;
+	k = size_r - 1;
 
-	return (add_strings(n1, n2, r, --size_r));
+	while (i >= 0 || j >= 0 || carry)
+	{
+		sum = carry;
+		if (i >= 0)
+			sum += n1[i--] - '0';
+		if (j >= 0)
+			sum += n2[j--] - '0';
+		carry = sum > 9;
+		r[k--] = (sum % 10) + '0';
+	}
+	return (r + k + 1);
 }

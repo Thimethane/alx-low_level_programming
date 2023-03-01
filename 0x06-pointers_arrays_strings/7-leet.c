@@ -5,10 +5,9 @@
  * @s: An input string to encode
  * Return: An encode string
  */
-char *leet(char *)
+char *leet(char *s)
 {
 	int i, j;
-	char s;
 	char *letters = "aAeEoOtTlL";
 	char *leet = "4433007711";
 
@@ -18,7 +17,7 @@ char *leet(char *)
 		{
 			if (s[i] == letters[j])
 			{
-				s[i] == leet[j];
+				s[i] = leet[j];
 				break;
 			}
 		}

@@ -6,10 +6,9 @@
  *
  * Return: The modified string
  */
-char *cap_string(char *)
+char *cap_string(char *s)
 {
 	int i = 0;
-	char s;
 
 	while (s[i])
 	{

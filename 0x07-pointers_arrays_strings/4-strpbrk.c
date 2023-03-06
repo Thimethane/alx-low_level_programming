@@ -22,4 +22,5 @@ char *_strpbrk(char *s, char *accept)
 		accept = start;
 		s++;
 	}
+	return (NULL);
 }

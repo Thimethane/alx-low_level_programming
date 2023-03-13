@@ -2,9 +2,10 @@
 #include <stdlib.h>
 
 /**
- * strtow - A function that splits a string into words
- * @str: An input pointer of the string to split
- * Return: A pointer to an array of strings (words), or NULL if it fails
+ * strtow - Splits a string into words
+ * @str: The string to split
+ *
+ * Return: Pointer to an array of strings (words), or NULL if it fails
  */
 char **strtow(char *str)
 {

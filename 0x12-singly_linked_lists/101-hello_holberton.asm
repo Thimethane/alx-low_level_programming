@@ -1,27 +1,24 @@
 section .data
-    message db "Hello, Holberton!",0
-    format db "%s\n",0
+    hello db 'Hello, Holberton', 0
+    fmt db '%s\n', 0
 
 section .text
     global main
+    extern printf
 
 main:
-    ; set up stack frame
     push rbp
     mov rbp, rsp
 
-    ; prepare arguments to printf
-    mov rdi, format
-    mov rsi, message
+    ; Pass the format string and the message string to printf
+    mov rdi, fmt
+    mov rsi, hello
+    xor rax, rax
 
-    ; call printf
-    xor eax, eax
+    ; Call printf
     call printf
 
-    ; clean up stack frame
     mov rsp, rbp
     pop rbp
-
-    ; return 0
     xor eax, eax
     ret

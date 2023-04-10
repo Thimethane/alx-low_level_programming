@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib>
 
 /**
  * print_binary - Prints the binary representation of a number.

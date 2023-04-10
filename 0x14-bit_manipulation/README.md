@@ -1,0 +1,1 @@
+These are bit manipulations
